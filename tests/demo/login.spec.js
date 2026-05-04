@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 import { LoginPage } from '../../pages/login';
 import { log } from 'node:console';
 
-test('login test', async ({ page }) => {
+test('login test',{tag:['@PlaywrightWithJenkins']}, async ({ page }) => {
  
   const loginPage = new LoginPage(page);
   await loginPage.navigate(); // Navigate to the login page
